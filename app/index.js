@@ -55,7 +55,7 @@ class Articles extends React.Component {
 class Clock extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {date: new Date()};
+        this.state = {date: "Load"};
     }
 
     componentDidMount() {
@@ -70,8 +70,11 @@ class Clock extends React.Component {
     }
 
     tick() {
+        let now = new Date();
+        let makeBeat = (now.getUTCSeconds() + (now.getUTCMinutes() * 60) + ((now.getUTCHours()+1) * 3600)) / 86.4;
+        let beat = Math.round(makeBeat);
         this.setState({
-            date: new Date()
+            date: beat
         });
     }
 
@@ -79,14 +82,14 @@ class Clock extends React.Component {
         return (
             <div>
                 <h1>Hey</h1>
-                <h2>It's {this.state.date.toLocaleTimeString()}.</h2>
+                <h2>It's @{this.state.date.toString()} BEATS.</h2>
             </div>
         );
     }
 }
 
 ReactDOM.render(
-    <Articles />,
+    <Clock />,
     document.getElementById('app')
 );
 
