@@ -6,12 +6,12 @@ body {
 
 div {
     margin: 0 auto;
-    width: 500px;
+    /*width: 500px;*/
 }
 
 h1, h2 {
-    text-transform: uppercase;
     font-family: 'Vollkorn', serif;
+    text-transform: uppercase;
 }
 
 h2 {
@@ -24,4 +24,59 @@ p {
 
 h1:nth-child(odd) {
     text-align: center;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+/*GAME CSS*/
+
+l, ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.game-info {
+  margin-left: 20px;
 }
