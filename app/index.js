@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Articles from './Articles';
 import Beats    from './Beats';
 import Game     from './Game';
+import Form     from './Form';
 import './index.css';
 
 
@@ -10,9 +11,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <Beats />
-                <Game />
-                <Articles />
+                <Form />
             </div>
         )
     }
