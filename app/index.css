@@ -33,9 +33,9 @@ img {
 
 /*GAME CSS*/
 
-l, ul {
+/*l, ul {
   padding-left: 30px;
-}
+}*/
 
 .board-row:after {
   clear: both;
@@ -79,4 +79,23 @@ l, ul {
 
 .game-info {
   margin-left: 20px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.languages {
+  display: flex;
+  justify-content: center;
+}
+
+.languages li {
+  margin: 10px;
+  font-weight: bold;
+  cursor: pointer;
 }
